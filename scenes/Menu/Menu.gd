@@ -15,5 +15,12 @@ func _ready():
 	$CountLabel.text = INSTANCES_TEXT + String(instancesCount)
 	$RedGenerator.connect("button_down" , self , "count_new_instance")
 	$VioletGenerator.connect("button_down" , self , "count_new_instance")
+	$Reset.connect("button_down", self , "_delete")
 
 	pass
+func _delete():
+	if Input.is_action_just_pressed("left_click"):
+		instancesCount = 0
+		$CountLabel.text = "Cantidad de instancias :" + "0"
+		get_tree().call_group("blocks", "_delete")
+	
