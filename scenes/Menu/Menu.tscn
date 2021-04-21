@@ -9,7 +9,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 759.99, 33.6962 )
 
-[node name="Menu" type="Node2D"]
+[node name="Menu" type="Node2D" groups=[
+"blocks",
+]]
 script = ExtResource( 5 )
 
 [node name="Background" type="Sprite" parent="."]
