@@ -5,7 +5,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.903
 
-[node name="BlockRed" type="RigidBody2D"]
+[node name="BlockRed" type="RigidBody2D" groups=[
+"blocks",
+]]
 gravity_scale = 2.0
 
 [node name="Sprite" type="Sprite" parent="."]
